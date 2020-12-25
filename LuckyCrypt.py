@@ -198,7 +198,7 @@ def choice1():
     
 def choice2():
     clearScreen()
-    print("< Derypting >")
+    print("< Decrypting >")
     print("")
     msg = askValidText("crypted sentence")
     key = askValidKey()
@@ -224,6 +224,8 @@ def choice2():
 
 def choice3():
     clearScreen()
+    print("< Crypting file >")
+    print("")
     cpt = 0
     for file in os.listdir():
         if file.endswith(".txt") and file != "Save.txt":
@@ -235,7 +237,9 @@ def choice3():
         time.sleep(1)
         print("")
         print("")
-        nicePrint("Please move the file yout want to crypt in the same directory as [LuckyCrypt.py] and make sure that it is a [.txt] file !")
+        nicePrint("Please move the file yout want to crypt in the same directory as [LuckyCrypt.py]")
+        print("")
+        nicePrint("Make sure this is a [.txt] file")
         print("")
         print("")
         enter = input("Press enter to continue...")
@@ -290,6 +294,8 @@ def choice3():
 
 def choice4():
     clearScreen()
+    print("< Decrypting file >")
+    print("")
     cpt = 0
     for file in os.listdir():
         if file.endswith(".txt") and file != "Save.txt":
@@ -301,7 +307,9 @@ def choice4():
         time.sleep(1)
         print("")
         print("")
-        nicePrint("Please move the file yout want to decrypt in the same directory as [LuckyCrypt.py] and make sure that it is a [.txt] file !")
+        nicePrint("Please move the file yout want to decrypt in the same directory as [LuckyCrypt.py]")
+        print("")
+        nicePrint("Make sure this is a [.txt] file")
         print("")
         print("")
         enter = input("Press enter to continue...")
@@ -367,7 +375,7 @@ if __name__ == "__main__":
             choice4()
         else:
             choice = 0
-            nicePrint("<error> Exiting progam...")
+            nicePrint("<error> Exiting program...")
             time.sleep(2)
         choice = menu()
     seeYou()
